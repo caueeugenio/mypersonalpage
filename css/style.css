@@ -1,0 +1,36 @@
+.menu {
+    background-color: white;
+}
+
+body {
+    background-color: rgba(0, 128, 128, 1);
+}
+
+.menu ul {
+    display: flex;
+    justify-content: space-around;
+}
+
+.menu li {
+    list-style: none;
+    display: flex;
+    /*tirando as bolinhas*/
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.site-title,
+.site-subtitle {
+    text-align: center;
+    color: whitesmoke;
+}
+
+.site-subtitle {
+    font-style: italic;
+}
