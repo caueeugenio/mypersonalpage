@@ -10,7 +10,8 @@ body {
     background-color: rgba(0, 128, 128, 1);
     background-size: auto 100vh;
     height: 100vh;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Source Code Pro', monospace;
+    color: whitesmoke;
 }
 
 header {
@@ -19,33 +20,8 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: rgb(27, 86, 104);
 }
-
-
-/*se a tela tiver pelo menos 400px vai carregar estes estilos*/
-
-
-/*breakpoints - pontos de quebra*/
-
-@media (min-width:400px) {
-    body {
-        font-size: 14px;
-    }
-}
-
-
-/*breakpoints - pontos de quebra*/
-
-@media (min-width:600px) {
-    body {
-        font-size: 18px;
-    }
-}
-
-
-/*breakpoints - pontos de quebra*/
-
-@media (min-width:1200px) {}
 
 .menu {
     background-color: white;
@@ -77,8 +53,14 @@ a {
     text-decoration: none;
 }
 
-a:hover {
-    background-color: rgb(26, 172, 172);
+.menu a:hover {
+    background-color: rgb(52, 175, 175);
+    color: whitesmoke;
+}
+
+.site-title {
+    font-family: 'Montserrat', sans-serif;
+    line-height: 2em;
 }
 
 .site-title,
@@ -88,10 +70,107 @@ a:hover {
 }
 
 .site-subtitle {
-    font-style: italic;
+    line-height: 1.2em;
+    font-family: 'Ubuntu', sans-serif;
 }
 
 .img-portfolio {
-    width: 180px;
-    height: 180px;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+
+.titulo-quem-sou {
+    text-align: center;
+    color: whitesmoke;
+    padding-bottom: 1em;
+}
+
+.portfolio {
+    padding: 2em;
+    height: 100vh;
+    object-fit: cover;
+    /*object-position: bottom;*/
+    /*ele cobre todo o espaco das imagens*/
+}
+
+.portfolio h2 {
+    font-family: 'Ubuntu', sans-serif;
+    margin-bottom: 0.5em;
+}
+
+.portfolio p {
+    color: whitesmoke;
+}
+
+.portfolio .grid {
+    display: grid;
+    gap: 1em;
+    /*propriedade gap é para o espaçamento e é o ideal qnd usamos grid*/
+}
+
+.portfolio figure {
+    text-align: center;
+}
+
+.rodape {
+    margin-top: 40em;
+    color: whitesmoke;
+    padding: 0.5em;
+    text-align: center;
+    background-color: brown;
+}
+
+
+/*RESPONSIVIDADE*/
+
+
+/*se a tela tiver pelo menos 400px vai carregar estes estilos*/
+
+
+/*breakpoints - pontos de quebra*/
+
+@media (min-width:400px) {
+    body {
+        font-size: 14px;
+    }
+    figure {
+        display: inline-block;
+    }
+}
+
+
+/*breakpoints - pontos de quebra*/
+
+@media (min-width:600px) {
+    body {
+        font-size: 18px;
+    }
+}
+
+
+/*breakpoints - pontos de quebra*/
+
+@media (min-width:1200px) {
+    body {
+        font-size: 20px;
+    }
+    .rodape {
+        margin-top: 0;
+    }
+}
+
+@media (min-width:560px) {
+    .portfolio .grid {
+        grid-template-columns: 240px 240px;
+    }
+}
+
+@media (min-width:880px) {
+    .portfolio .grid {
+        grid-template-columns: repeat(3, 240px);
+        justify-content: center;
+        align-content: center;
+        height: calc(100vh - 4em -48px -1.5em);
+    }
 }
